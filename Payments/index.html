@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=0.0, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<title>最是夜深人静时</title>
+<meta name="keywords" content="赞助soledad-唔该晒咁多位大佬鼎力支持-">
+<meta name="description" content="赞助soledad-唔该晒咁多位大佬鼎大力支持-">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="赞助soledad-唔该晒咁多位大佬鼎大力支持-">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" id="_bootstrap-css" href="./yfw/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="_fontawesome-css" href="./yfw/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="_main-css" href="./yfw/main.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="_forums-css" href="./yfw/main(1).min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wzwazo-css" href="./yfw/902.css" type="text/css" media="all">
+<script type="text/javascript" src="./yfw/jquery.min.js" id="jquery-js"></script>
+
+<!--HEADER_CODE_END-->
+<meta name="apple-mobile-web-app-title" content="">
+<div class="mobile-header">
+<div class="fixed-body" data-toggle-class="mobile-navbar-show" data-target="body"></div>
+</div>
+<main class="container">
+<div class="content-wrap">
+  <div id="percentageCounter"></div>
+   <style>
+.wzw-donate-cover{position:relative;width:100%;height:100%;border-radius:var(--main-radius);overflow:hidden;box-sizing:border-box}
+.wzw-donate-cover img{width:100%;-o-object-fit:cover;object-fit:cover;cursor:pointer;-webkit-user-drag:none}
+.wzw-donate-programme{overflow:hidden}
+.wzw-donate-programme>.wzw-programme-title {
+    text-align: center;
+    background: linear-gradient(135deg,#16aaf7 0,#c696fc 80%);
+    padding: 10px;
+    font-size: 1.8em;
+    color: #fff;
+}
+.wzw-programme-content .wzw-money-wrap{display:flex;flex-direction:row;flex-wrap:wrap}
+.wzw-programme-content .wzw-money-item{position:relative;width:100%;height:180px;margin:10px;display:flex;flex-direction:column;align-items:center;justify-content:space-around;border:1px solid transparent;overflow:hidden;-webkit-transition:transform .5s;transition:transform .5s;box-shadow:8px 8px 20px 0 rgb(55 99 170 / 10%), -8px -8px 20px 0 #fff;}
+.wzw-programme-content .wzw-money-item:hover{border-color:#ed6d83;-webkit-transform:translateY(-8px);transform:translateY(-8px);-webkit-transition:transform .5s;transition:transform .5s}
+.wzw-donate-programme .wzw-money-label{width:70px;height:30px;line-height:30px;background: #fe85ca;;border-radius:0 5px 0 10px;font-weight:700;color:var(--main-bg-color);font-size:18px;text-align:center;position:absolute;top:-2px;right:-2px}
+.wzw-donate-programme .wzw-money-icon{width:90px;height:90px}
+.wzw-donate-programme .wzw-money-name{font-size:1.6em}
+@media (min-width:768px) and (max-width:1023px){.wzw-donate-cover{height:350px}
+.wzw-programme-content .wzw-money-item{width:calc(100% / 2 - 20px)}
+}
+@media (min-width:1024px){.wzw-donate-cover{height:450px}
+.wzw-programme-content .wzw-money-item{width:calc(100% / 3 - 20px)}
+}
+.modal-content{overflow:hidden}
+.wzw-modal-body{background:var(--body-bg-color)}
+.wzw-donate-modal-zfm{position:relative;text-align:center;background:var(--main-bg-color);overflow:hidden;border-radius:var(--main-radius)}
+.wzw-donate-modal-zfm::after,.wzw-donate-modal-zfm::before{position:absolute;content:"";width:35px;height:35px;background:var(--body-bg-color);border-radius:99px;top:6.8rem}
+.wzw-donate-modal-zfm::before{left:-17px}
+.wzw-donate-modal-zfm::after{right:-17px}
+.wzw-donate-modal-zfm img{width:auto;height:180px}
+.wzw-donate-modal-title{margin:1rem;border-bottom:.25rem dashed var(--main-border-color)}
+.wzw-donate-modal-title b{font-size:2rem}
+.wzw-donate-modal-ewm{padding:1rem}
+.wzw-donate-modal-btn{padding:15px}
+.wzw-donate-btns{display:inline-block;background:var(--main-border-color);border-radius:99px;border:1px solid var(--main-border-color);overflow:hidden}
+.btn.focus,.btn:focus,.btn:hover{color:var(--key-color)!important}
+.wzw-donate-btns .wzw-zf-btn{border-radius:99px;background:0 0;transition:all .5s}
+.wzw-donate-btns .wzw-zf-btn.wzw-active{background:var(--main-bg-color)}
+/*说明*/
+.wzw-text-title{font-size:18px;font-weight:200;color:#ffa0a0;}
+.wzw-text-title>i{padding:0 8px 0 5px;margin-right:5px;color:#fff;background:#feaa71;border-radius:var(--main-radius)}
+.wzw-text-content{padding:0 10px}
+.wzw-text-content{font-size:16px}
+.wzw-serve-content>.wzw-serve-item{padding-left:1em;font-size:16px;list-style:inside!important}
+.wzw-serve-content>.wzw-serve-item>b{color:var(--wp--preset--color--vivid-red)}
+.feature-icon img{width:60px;height:auto}
+.wzwco {box-shadow:0 0 10px rgb(227 228 228)}
+/*é¦–é¡µå¿«é€Ÿå¯¼èˆª*/
+.jitheme-container {
+/* margin-top: 0px!important; */
+}
+.jitheme-background-default {
+background-color: #fff;
+}
+.jitheme_slide_ss {
+display:flex;
+-ms-flex-wrap:wrap;
+flex-wrap:wrap;
+margin-left:-20px;
+}
+.jitheme_slide_jb {
+position:relative;
+margin-bottom:30px!important;
+}
+.jitheme_slide_n {
+display:flex;
+margin:0 auto;
+padding-top: 10px;
+height: 60px;
+color:#fff;
+font-size:14px;
+justify-content:space-between;
+}
+.jitheme_slide_n .jitheme_slide_s {
+position:relative;
+display:inline-block;
+padding:0 30px;
+height:40px;
+border-radius:73px;
+background:none;
+vertical-align:middle;
+text-align:center;
+line-height:40px
+}
+.jitheme_slide_n .jitheme_slide_s ul {
+float:left;
+margin:0 auto
+}
+.jitheme_slide_n .jitheme_slide_s li {
+float:left;
+margin-right:40px
+}
+.jitheme_slide_n .jitheme_slide_s li .first {
+color:var(--b2color)
+}
+.jitheme_slide_n .jitheme_slide_s li a {
+float:left;
+color:#606075;
+font-weight: 200;
+font-size: 14px;
+}
+.jitheme_slide_n .jitheme_slide_y {
+/* font-weight:600; */
+position:relative;
+display:inline-block;
+padding:0 40px;
+height:40px;
+background:none;
+vertical-align:middle;
+text-align:center;
+line-height:40px;
+}
+.jitheme_slide_n .jitheme_slide_y a {
+margin-left:40px;
+color: #ff3355;
+}
+.jitheme_slide_d {
+padding-left:20px;
+flex:0 0 25%;
+box-sizing:border-box;
+width:100%;
+max-width:100%
+}
+.jitheme-dt:hover {
+transform: translateY(-3px);
+-webkit-transform: translateY(-3px);
+-ms-transform: translateY(-3px);
+transform: translateY(-3px);
+}
+.jitheme_slide_d .mini-stats {
+position:relative;
+display:-ms-flexbox;
+display:flex;
+-ms-flex-direction:column;
+flex-direction:column;
+min-width:0;
+word-wrap:break-word;
+transition: all .3s;
+background-color:var(--body-bg-color);
+background-clip:border-box;
+border:1px solid rgba(0,0,0,.125);
+border:none;
+-webkit-box-shadow:0 0 1.25rem rgba(108,118,134,0.1);
+box-shadow:0 0 1.25rem rgba(108,118,134,0.1);
+overflow:hidden;
+border-radius: var(--main-radius);
+}
+.jitheme_slide_d .mini-stats:hover {
+transform: translateY(-3px);
+-webkit-transform: translateY(-3px);
+-ms-transform: translateY(-3px);
+transform: translateY(-3px);
+}
+.mini-stats .mini-stats-content {
+padding:10px 15px 15px 15px!important
+}
+.jitheme_slide_d_mb4,.my-4 {
+margin-bottom:15px!important
+}
+.jitheme_slide_d_right {
+text-align:right!important;
+color:rgba(255,255,255,.5)!important
+}
+.jitheme_slide_d_right span {
+margin-top:.5rem!important;
+background-color:#f8f9fa;
+margin-bottom:.5rem!important;
+color:#f27d7d;
+display:inline-block;
+padding:.25em .4em;
+font-size:75%;
+font-weight:700;
+line-height:1;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:.25rem;
+transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+}
+.jitheme_slide_d_right p {
+color:#fff
+}
+.jitheme_slide_d_m {
+margin-left: 15px!important;
+margin-right: 15px!important;
+}
+.jitheme_slide_d_m .mini-stats-desc {
+display:inline-block;
+position:relative;
+bottom:22px;
+height:100%;
+-webkit-box-shadow:0 0 1.25rem rgba(108,118,134,0.1);
+box-shadow:0 0 1.25rem rgba(108,118,134,0.1);
+background-color:var(--body-bg-color) !important;
+padding: 10px!important;
+display:flex;
+-ms-flex-wrap:wrap;
+flex-wrap:wrap;
+border-radius: var(--main-radius);
+}
+.jitheme_slide_d_m .mini-stats-desc li {
+float:left;
+flex:0 0 33.33333%;
+box-sizing:border-box;
+width:100%;
+max-width:100%;
+}
+.jitheme_slide_d_m .mini-stats-desc a {
+display:block;
+/* height:60px; */
+/* padding:12px 15px 15px 15px; */
+}
+.jitheme_slide_d_m .mini-stats-desc a:hover {
+color:var(--primary-color)!important
+}
+.jitheme_slide_d_m .mini-stats-desc a img {
+display:block;
+width:58px;
+height:45px;
+margin:0 auto 5px
+}
+.jitheme_slide_d_m .mini-stats-desc p {
+display:block;
+height:20px;
+line-height:20px;
+overflow:hidden;
+font-size: 13px;
+color:#666;
+text-align:center;
+}
+.jitheme_slide_n ol, ul, li {
+list-style: none;
+}
+.widget_text.zib-widget.widget_custom_html{
+	padding:0px;
+}
+.mini-stats-desc.b2-radius li:not(article):hover{opacity: 1;z-index: 99;border-radius: 20px;transform: translateY(-5px);box-shadow: 0 3px 20px rgba(0, 0, 0, .25);animation: index-link-active 1s cubic-bezier(0.315, 0.605, 0.375, 0.925) forwards;}@keyframes index-link-active {0%{transform: perspective(2000px) rotateX(0) rotateY(0) translateZ(0);}16%{transform: perspective(2000px) rotateX(10deg) rotateY(5deg) translateZ(32px);}100%{transform: perspective(2000px) rotateX(0) rotateY(0) translateZ(65px);}}
+@media (max-width: 767px) {
+.jitheme_slide_d {
+    padding-left: 20px;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+@media only screen and (max-width:1100px) {
+	.textwidget.custom-html-widget {
+    	display:none!important
+    }
+}
+</style>
+
+	
+
+<main class="container">
+    <div class="content-wrap">
+        <div class="content-layout">
+                            <!-- 主体 -->
+                <div class="wzw-donate-programme mb20 main-bg main-shadow radius8">
+                    <div class="wzw-programme-title">
+<section data-id="124069" class="wzweditor style_1" powered-by="https://www.277711.xyz" draggable="true" data-md5="023bb">
+<section style="text-align: center;" powered-by="https://www.277711.xyz" data-md5="023bb" class="style_2">
+<section style="display: inline-block;vertical-align:middle;" powered-by="https://www.277711.xyz" data-md5="023bb" class="style_3">
+<section style="display: flex;align-items: center;justify-content: space-between;" powered-by="https://www.277711.xyz" data-md5="023bb" class="style_4">
+<section style="width: 7px;height: 7px;border:1px solid #ffcd59;border-radius: 50%;box-sizing: border-box;transform: translate(52px,5px);" powered-by="https://www.277711.xyz" data-md5="023bb" class="style_5"></section>
+<section style="width:21px;margin: 0 -9px 8px auto;line-height:2px;" powered-by="https://www.277711.xyz" data-md5="023bb" class="style_6">
+    <img src="./yfw/zu3.png" style="vertical-align:middle;width:100%;" class="small_image style_7" _src="/yfw/zu3.png" data-isstyleimage="1" draggable="false" data-md5="023bb"></section>
+    </section>
+<section style="display: flex;align-items: center;justify-content: center;" powered-by="https://www.277711.xyz" data-md5="023bb" class="style_8">
+<section style="width: 28px;height: 28px;background-color: #85d6ac;border-radius: 4px;margin:0 8px;transform-origin: right bottom;transform: rotate(16deg);" powered-by="https://www.277711.xyz" class="wzw-banone style_9" data-md5="023bb">
+<section class="wxqq-Color style_10" style="color: #fff;letter-spacing: 1px;line-height: 28px;text-align:center;font-size: 16px;font-weight: bold;" powered-by="https://www.277711.xyz" data-md5="023bb"><p class="wzwbrush style_11" style="padding: 0px;margin: 0px;" data-md5="023bb">赞</p></section>
+</section>
+<section style="width: 28px;height: 28px;background-color: #ff8566;border-radius: 4px;margin:0 8px;transform-origin: left bottom;transform: rotate(-16deg);" powered-by="https://www.277711.xyz" class="wzw-banone style_12" data-md5="023bb">
+    <section class="wxqq-Color style_13" style="color: #fff;letter-spacing: 1px;line-height: 28px;text-align:center;font-size: 16px;font-weight: bold;" powered-by="https://www.277711.xyz" data-md5="023bb"><p class="wzwbrush style_14" style="padding: 0px;margin: 0px;" data-md5="023bb">助</p></section>
+    </section>
+<section style="width: 28px;height: 28px;background-color: #ffcd59;border-radius: 4px;transform-origin: right top;transform: rotate(16deg);" powered-by="https://www.277711.xyz" class="wzw-banone style_15" data-md5="023bb">
+    <section class="wxqq-Color style_16" style="color: #fff;letter-spacing: 1px;line-height: 28px;text-align:center;font-size: 16px;font-weight: bold;" powered-by="https://www.277711.xyz" data-md5="023bb"><p class="wzwbrush style_17" style="padding: 0px;margin: 0px;" data-md5="023bb">方</p></section>
+    </section>
+<section style="width: 28px;height: 28px;background-color: #7fceff;border-radius: 4px;margin:0 2px;transform-origin: left top;transform: rotate(-16deg);" powered-by="https://www.277711.xyz" class="wzw-banone style_18" data-md5="023bb">
+    <section class="wxqq-Color style_19" style="color: #fff;letter-spacing: 1px;line-height: 28px;text-align:center;font-size: 16px;font-weight: bold;" powered-by="https://www.277711.xyz" data-md5="023bb"><p class="wzwbrush style_20" style="padding: 0px;margin: 0px;" data-md5="023bb">案</p></section>
+    </section>
+</section>
+<section style="display: flex;align-items: center;justify-content: space-between;margin-top: -7px;" powered-by="https://www.277711.xyz" data-md5="023bb" class="style_21">
+<section style="width: 7px;height: 7px;border:1px solid #ffab4c;border-radius: 50%;box-sizing: border-box;transform: translate(7px,-11px);" powered-by="https://www.277711.xyz" data-md5="023bb" class="style_22"></section>
+<section style="width: 7px;height: 7px;border:1px solid #85d6ac;border-radius: 50%;box-sizing: border-box;transform: translate(-27px,5px);" powered-by="https://www.277711.xyz" data-md5="023bb" class="style_23"></section>
+</section>
+</section>
+</section>
+</section>
+</div>
+
+<div class="wzw-programme-content">
+<ul class="wzw-money-wrap">
+<li data-pay="6" class="wzwco wzw-money-item main-shadow radius8">
+                                <span class="wzw-money-label">￥6蚊</span>
+                                <img class="wzw-money-icon" src="./yfw/1.png" alt="一嗰鸡脾" draggable="false">
+                                <b class="wzw-money-name">一嗰鸡脾</b>
+</li>
+<li data-pay="16" class="wzwco wzw-money-item main-shadow radius8">
+                                <span class="wzw-money-label">￥16蚊</span>
+                                <img class="wzw-money-icon" src="./yfw/2.png" alt="一杯咖啡" draggable="false">
+                                <b class="wzw-money-name">一杯咖啡</b>
+</li>
+<li data-pay="26" class="wzwco wzw-money-item main-shadow radius8">
+                                <span class="wzw-money-label">￥26蚊</span>
+                                <img class="wzw-money-icon" src="./yfw/4.png" alt="一嗰汉堡包" draggable="false">
+                                <b class="wzw-money-name">一嗰汉堡包</b>
+</li>
+ <li data-pay="46" class="wzwco wzw-money-item main-shadow radius8">
+                                <span class="wzw-money-label">￥46蚊</span>
+                                <img class="wzw-money-icon" src="./yfw/5.png" alt="一份肯德基套餐" draggable="false">
+                                <b class="wzw-money-name">一份肯德基套餐</b>
+</li>
+<li data-pay="66" class="wzwco wzw-money-item main-shadow radius8">
+                                <span class="wzw-money-label">￥66蚊</span>
+                                <img class="wzw-money-icon" src="./yfw/3.png" alt="一份全家桶" draggable="false">
+                                <b class="wzw-money-name">一份全家桶</b>
+</li>
+<li data-pay="zdy" class="wzwco wzw-money-item main-shadow radius8">
+                                <span class="wzw-money-label">你話事</span>
+                                <img class="wzw-money-icon" src="./yfw/6.png" alt="爱心红包" draggable="false">
+                                <b class="wzw-money-name dsjb">爱心红包</b>
+ </li>
+                        </ul>
+                    </div>
+                   
+                </div>
+ <div class="wzw-donate-programme mb20 main-bg main-shadow radius8">
+<div class="wzw-programme-title">
+<section data-id="120340" class="wzweditor style_1" data-type="lspecial04,lspecial06" powered-by="https://www.277711.xyz" draggable="true" data-md5="997e1">
+<section style="display: flex;align-items: center;justify-content: center;" powered-by="https://www.277711.xyz" data-md5="997e1" class="style_2">
+    <section style="width:40px;line-height:2px;" powered-by="https://www.277711.xyz" data-md5="997e1" class="style_3">
+        <img src="./images/gif/hanke.gif" style="vertical-align:middle;width:100%;" class="small_image style_4" _src="./images/gif/hanke.gif" data-isstyleimage="1" draggable="false" data-md5="997e1">
+        </section>
+        <section style="margin: 0 10px;" powered-by="https://www.277711.xyz" data-md5="997e1" class="style_5">
+            <section style="display: flex;align-items: center;background: linear-gradient(to top,#f7584a 40% ,rgba(255, 255, 255, 0) 40%);padding: 0 0 3px 0;justify-content: center;" powered-by="https://www.277711.xyz" class="wzw-banone style_6" data-md5="997e1">
+                <section style="margin-right: 7px;" powered-by="https://www.277711.xyz" data-md5="997e1" class="style_7">
+                    <section class="wxqq-Color style_8" style="color: #FF6B4D;letter-spacing: 0px;line-height: 18px;text-align:justify;font-size: 16px;font-weight: bold;" powered-by="https://www.277711.xyz" data-md5="997e1"><p class="autosort style_9" style="padding: 0px;margin: 0px;" data-md5="997e1"></p></section>
+                    </section>
+<section style="" powered-by="https://www.277711.xyz" data-md5="997e1" class="style_10">
+<section class="wxqq-Color style_11" style="color: #FFFFFF;letter-spacing: 1.5px;line-height: 16px;text-align:justify;font-size: 16px;font-weight: bold;" powered-by="https://www.277711.xyz" data-md5="997e1">
+    <p class="wzwbrush style_12" style="padding: 0px;margin: 0px;" data-md5="997e1">赞助事项</p></section>
+    </section>
+    </section>
+    <section style="" powered-by="https://www.277711.xyz" data-md5="997e1" class="style_13">
+        <section class="wxqq-Color style_14" style="color: #FFFFFF;letter-spacing: 1.5px;line-height: 20px;text-align:justify;font-size: 12px;font-weight: bold;" powered-by="https://www.277711.xyz" data-md5="997e1">
+            <p class="wzwbrush style_15" style="padding: 0px;margin: 0px;" data-md5="997e1">最是夜深人静时 https://www.277711.xyz</p></section>
+            </section>
+            </section>
+<section style="width:40px;line-height:2px;" powered-by="https://www.277711.xyz" data-md5="997e1" class="style_16">
+    <img src="./images/gif/kedaya.gif" style="vertical-align:middle;width:100%;" class="small_image style_17" _src="./images/gif/Duck.gif" data-isstyleimage="1" draggable="false" data-md5="997e1"></section>
+    </section>
+    </section>
+                    </div>
+                    <div class="wzw-programme-content box-body theme-box">
+                        <!--1-->
+                        <section data-id="48353" class="wzweditor style_1" data-type="lspecial02,lspecial06" powered-by="https://www.277711.xyz" draggable="true" data-md5="2ece3"><section style="box-sizing: border-box;padding-bottom:2px;" powered-by="https://www.277711.xyz" data-md5="2ece3" class="style_2"><section style="display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:end;" powered-by="https://www.277711.xyz" data-md5="2ece3" class="style_3"><section class="wxqq-borderBottomColor wxqq-borderTopColor wxqq-borderRightColor wxqq-borderLeftColor style_4" style="box-sizing: border-box;border:2px solid #FF977B;padding:1px 0;transform:rotate(0deg);-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);" powered-by="https://www.277711.xyz" data-md5="2ece3"><section style="background-color:#FFDBBB;box-sizing: border-box;padding:0 5px;margin:1px -4px -6px 4px;" powered-by="https://www.277711.xyz" class="wzw-bacolor style_5" data-bastyle="background-color:#FFDBBB;box-sizing: border-box;padding:0 5px;margin:1px -4px -6px 4px;" data-md5="2ece3"><section class="wxqq-Color style_6" style="color: #FF977B;letter-spacing: 1px;line-height: 24px;text-align:center;" powered-by="https://www.277711.xyz" data-md5="2ece3"><p class="wzwbrush style_7" style="padding: 0px;margin: 0px;font-size: 14px;" data-md5="2ece3">NO.<span class="autosort style_8" data-md5="2ece3">01</span></p></section></section></section><section style="-webkit-box-flex: 1;width: 0;margin-bottom:1px;" powered-by="https://www.277711.xyz" data-md5="2ece3" class="style_9"><section class="wxqq-Color style_10" style="color: #FF977B;letter-spacing: 1px;line-height: 21px;text-align: justify;margin-left:8px;" powered-by="https://www.277711.xyz" data-md5="2ece3"><p class="wzwbrush style_11" style="padding: 0px;margin: 0px;font-size: 18px;" data-md5="2ece3">
+                       Soledad-</p></section><section class="wxqq-borderTopColor style_12" style="width:100%;height:0px;box-sizing: border-box;border-top:2px solid #FF977B;" powered-by="https://www.277711.xyz" data-md5="2ece3"></section></section></section></section></section>
+                        <hr>
+                        
+                        <div class="wzw-text-content">
+                            <section data-id="50923" class="wzweditor style_1" data-tools="小蚂蚁编辑器" powered-by="https://www.277711.xyz" data-md5="6a933" act="wzw"><section style="padding-bottom:2px;box-sizing:border-box;" powered-by="https://www.277711.xyz" data-md5="6a933" class="style_2"><section style="width:30px;margin:0px 0px -11px 50px;line-height:20px;transform:skew(-20deg);-webkit-transform:skew(-20deg);-moz-transform:skew(-20deg);-o-transform:skew(-20deg);" powered-by="https://www.277711.xyz" data-md5="6a933" class="style_3"><section style="display:inline-block;vertical-align:middle;margin-right:5px;width:10px;height:20px;line-height:20px;background-color:#ffe4e4;" powered-by="https://www.277711.xyz" class="wzw-banone style_4" data-md5="6a933"></section><section style="display:inline-block;vertical-align:middle;width:10px;height:20px;line-height:20px;background-color:#ffe4e4;" powered-by="https://www.277711.xyz" class="wzw-banone style_5" data-md5="6a933"></section></section><section style="display:-webkit-flex;display:flex;align-items:stretch;" powered-by="https://www.277711.xyz" data-md5="6a933" class="style_6"><section style="width:20px;padding:20px 0px;box-sizing:border-box;" powered-by="https://www.277711.xyz" data-md5="6a933" class="style_7"><section style="height:100%;width:20px;background-color:rgba(255,228,228,0.5);" powered-by="https://www.277711.xyz" class="wzw-banone style_8" data-md5="6a933"></section></section><section style="flex:1;" powered-by="https://www.277711.xyz" data-md5="6a933" class="style_9"><section style="background-color:rgba(255,228,228,0.5);padding:20px 0px;box-sizing:border-box;" powered-by="https://www.277711.xyz" class="wzw-banone style_10" data-md5="6a933"><section style="background-color:rgba(255,228,228,0.5);padding:20px 30px;box-sizing:border-box;" powered-by="https://www.277711.xyz" class="wzw-banone style_11" data-md5="6a933"><section class="wxqq-Color style_12" style="color:#ff9396;letter-spacing:1px;line-height:24px;text-align:justify;" powered-by="https://www.277711.xyz" data-md5="6a933"><p class="wzwbrush style_13" style="font-size:14px;padding:0px;margin:0px;" data-md5="6a933">希望大家能够赞助，为soledad加油打气！激励soledad继续坚持落去！唔该晒！</p></section></section></section></section><section style="width:20px;padding:20px 0px;box-sizing:border-box;" powered-by="https://www.277711.xyz" data-md5="6a933" class="style_14"><section style="height:100%;width:20px;background-color:rgba(255,228,228,0.5);" powered-by="https://www.277711.xyz" class="wzw-banone style_15" data-md5="6a933"></section></section></section><section style="width:30px;margin:-11px 50px 0px auto;line-height:20px;transform:skew(-20deg);-webkit-transform:skew(-20deg);-moz-transform:skew(-20deg);-o-transform:skew(-20deg);" powered-by="https://www.277711.xyz" data-md5="6a933" class="style_16"><section style="display:inline-block;vertical-align:middle;margin-right:5px;width:10px;height:20px;line-height:20px;background-color:#ffe4e4;" powered-by="https://www.277711.xyz" class="wzw-banone style_17" data-md5="6a933"></section><section style="display:inline-block;vertical-align:middle;width:10px;height:20px;line-height:20px;background-color:#ffe4e4;" powered-by="https://www.277711.xyz" class="wzw-banone style_18" data-md5="6a933"></section></section></section></section>
+                        </div>
+                        <hr>
+                        
+                        <!--4--><section data-id="119931" class="wzweditor style_1" data-type="lspecial02,lspecial04" powered-by="https://www.277711.xyz" data-md5="de993"><section style="text-align: center;" powered-by="https://www.277711.xyz" data-md5="de993" class="style_2"><section class="wxqq-Color style_3" style="color: #FF898C;letter-spacing: 1px;margin-left: 40px; line-height:16px;text-align:justify;font-size: 16px;font-weight: bold;margin-bottom: -11px;" powered-by="https://www.277711.xyz" data-md5="de993"><p class="wzwbrush style_4" style="padding: 0px;margin: 0px;" data-md5="de993">Soledad-</p></section><section class="wzw-bacolor wxqq-bg style_5" style="box-sizing: border-box;padding:0px;background-color:#FF898C;width: 30px;height: 30px;margin-bottom: -30px;transform: rotate(0deg);" powered-by="https://www.277711.xyz" data-md5="de993"></section><section class="wxqq-borderBottomColor wxqq-borderTopColor wxqq-borderRightColor wxqq-borderLeftColor style_6" style="box-sizing: border-box;border:10px solid #FFDCDB;padding:0; " powered-by="https://www.277711.xyz" data-md5="de993"><section style="box-sizing: border-box;padding:20px 0;background-color:#fff;transform: rotate(0deg);" powered-by="https://www.277711.xyz" class="wzw-banone style_7" data-md5="de993"><section class="wxqq-Color style_8" style="color: #FF898C;letter-spacing: 1.5px;margin-left: 1.5px; line-height: 28px;text-align:center;font-size: 14px;" powered-by="https://www.277711.xyz" data-md5="de993"><p class="wzwbrush style_9" style="padding: 0px;margin: 0px;" data-md5="de993">呢朵世间最美好嘅玫瑰，</p><p class="wzwbrush style_10" style="padding: 0px;margin: 0px;" data-md5="de993">星尘为泥，银河滋养，永不枯萎，</p><p class="wzwbrush style_11" style="padding: 0px;margin: 0px;" data-md5="de993">永远响沉静宇宙中盛放。</p><p class="wzwbrush style_12" style="padding: 0px;margin: 0px;" data-md5="de993">呢嗰喺我要俾你的，宇宙级别嘅浪漫。</p></section></section></section><section style="width:30px;margin: -36.2px 0 0 auto;line-height:2px;transform: rotate(0deg);" powered-by="https://www.277711.xyz" data-md5="de993" class="style_13"><img src="./images/gif/Duck.gif" style="vertical-align:middle;width:100%;" class="small_image style_14" data-isstyleimage="1" data-md5="de993" _src="/images/gif/Duck.gif"></section></section></section>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 支付弹窗 -->
+                <div class="wp-block-zibllblock-modal wzwi-donate-modal">
+                    <div class="modal fade" id="wzw_donate-modal" aria-hidden="true" data-bkg1="false" aria-bkg2="false" role="dialog" tabindex="-1" style="display: none;">
+                        <div class="modal-dialog modal-mini" data-kd="modal-mini" style="margin-top: 319.5px;">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <strong class="modal-title">🐧扫码赞助</strong>
+                                    <button class="close" data-dismiss="modal"><div data-class="ic-close" data-svg="close" data-viewbox="0 0 1024 1024"><svg class="ic-close" viewBox="0 0 1024 1024"><path d="M573.44 512.128l237.888 237.696a43.328 43.328 0 0 1 0 59.712 43.392 43.392 0 0 1-59.712 0L513.728 571.84 265.856 819.712a44.672 44.672 0 0 1-61.568 0 44.672 44.672 0 0 1 0-61.568L452.16 510.272 214.208 272.448a43.328 43.328 0 0 1 0-59.648 43.392 43.392 0 0 1 59.712 0l237.952 237.76 246.272-246.272a44.672 44.672 0 0 1 61.568 0 44.672 44.672 0 0 1 0 61.568L573.44 512.128z" p-id="35424" data-spm-anchor-id="a313x.7781069.0.i48"></path></svg></div></button>
+                                </div>
+                                <div class="wzw-modal-body modal-body">
+                                    <div class="wzw-donate-modal-zfm modal-body">
+                                        <div class="wzw-donate-modal-title dsjb">
+                                            <b>赞助发电❤支持Soledad</b>
+                                            <p class="wzwi_pay-title">🐧爱心红包（唔该扫码自定义金额）</p>
+                                        </div>
+                                        <div class="wzw-donate-modal-ewm">
+                                            <img src="./yfw/zdy.png" draggable="false">
+                                        </div>
+                                        <p>🐧长按保存支付二维码</p>
+                                        <div class="wzw-donate-modal-btn">
+                                            <div class="wzw-donate-btns">
+                                                <button data-type="wx" class="btn wzw-zf-btn wzw-active">🐧微信支付</button>
+                                                <button data-type="zfb" class="btn wzw-zf-btn">🐧支付宝支付</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var pay_money='zdy',pay_type = "wx";
+                    function actv_zf_func(pay_ty){
+                        $(".wzw-zf-btn").each(function() {
+                            $(this).attr("data-type") === pay_ty ? $(this).addClass('wzw-active') : $(this).removeClass('wzw-active');
+                        });
+                        $(".wzw-donate-modal-ewm>img").attr("src","./pay/"+ pay_ty +"/"+ pay_money +".webp");
+                    }
+                    $(".wzw-programme-content").on("click", ".wzw-money-item", function() {
+                        pay_money = $(this).attr("data-pay");
+                        pay_type = "wx";
+                        var pay_title = $(this).find('.wzw-money-name').text();
+                        var pay_text = pay_money === 'zdy' ? '唔该扫码自定义金额' : "￥ " + pay_money;
+                        $(".wzw-donate-modal-title>.wzwi_pay-title").html(pay_title+"（"+pay_text+"）");
+                        actv_zf_func(pay_type);
+                        $('#wzw_donate-modal').modal('show');
+                    });
+                    $(".wzwi-donate-modal").on("click", ".wzw-zf-btn", function() {
+                        pay_type = $(this).attr("data-type");
+                        actv_zf_func(pay_type);
+                    });
+                </script>
+                
+                </main></div>
+                
+			
+
+    </main>
+<script type="text/javascript" src="./yfw/bootstrap.min.js" id="bootstrap-js"></script>
+<script type="text/javascript" src="./yfw/loader.js" id="_loader-js"></script>
+<script type="text/javascript" src="./yfw/main(2).min.js" id="forums-js"></script>
+<script type="text/javascript" src="./yfw/font_3803781_7en6ktg47f4.js" id="tubiao-js"></script>
+
+
+
+<div class="modal fade flex jc" style="display:none;" id="zibpay_modal" tabindex="-1" role="dialog" aria-hidden="false">   
+<div class="modal-dialog" role="document">   
+<div class="pay-payment alipay">            
+<div class="modal-body modal-pay-body">         
+<div class="row-5 hide-sm">                      
+<img class="lazyload pay-sys t-wechat" alt="alipay" src="" data-src="">    
+<img class="lazyload pay-sys t-alipay" alt="wechat" src="" data-src="">         
+</div>                  
+<div class="row-5">     
+<div class="pay-qrcon">  
+<div class="qrcon">      
+<div class="pay-logo-header mb10">
+    <span class="pay-logo"></span>
+    <span class="pay-logo-name t-wechat">支付宝</span>
+    <span class="pay-logo-name t-alipay">微信支付</span>
+    </div>                           
+    <div class="pay-title em09 muted-2-color padding-h6"></div>  
+    <div><span class="em09">￥</span>
+    <span class="pay-price em14"></span>
+    </div>                           
+    <div class="pay-qrcode">       
+    <img src="" alt="pay-qrcode">   
+    </div>                   
+    </div>             
+    <div class="pay-switch"></div> 
+    <div class="pay-notice">
+        <div class="notice load">正在生成订单，请稍候</div>
+        </div>              
+        </div>			
+        </div>            
+        </div>         
+        </div>       
+        </div>   
+        </div>
+        </body>
+        </html>
+
+<!DOCTYPE html>
+<html lang="zh">
+		<!--透明主题-->
+<style>
+/* 屏幕适配 */
+@media only screen and (min-width: 1200px) {
+    .ui.container {
+    width: 80% !important;
+}
+}
+
+@media only screen and (max-width: 767px) {
+    .ui.card>.content>.header:not(.ui), .ui.cards>.card>.content>.header:not(.ui) {
+        margin-top: 0.4em !important;
+    }
+}
+
+/* 整体图标 */
+i.icon {
+    color: #000;
+    width: 1em !important;
+}
+
+/* 背景图片 */
+body {
+    content: " " !important;
+    background: fixed !important;
+    z-index: -1 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-image: url(https://imgapi.cn/bing.php) !important;
+    font-family: Arial,Helvetica,sans-serif !important;
+}
+</style>
+<br>
+
+<!-- 弹窗公告开始-->
+<!-- 宽度可底下往下数在第9238行的width: 460px进行调整，数值越大，宽度越大，默认width: 500px，建议调为width: 350px-->
+<!-- 最底部：我知道了背景蓝色框框长度可在哦，我知道了的width: 30%;宽度进行调整，数值越大，宽度越大，width: 80%，建议调为width: 30%-->
+<!-- 整体调大调小：在9238行的padding:50px 40px进行调整，数值越大，整体越大，width: 80%，建议调为20px 10px-->
+<!-- 字体颜色代码color: #ff2700;代表红色color: #00ddff;代表浅蓝色color: #0532ff;代表深蓝色以此类推-->
+<div class="web_notice" style="
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.3);
+z-index: 99999;
+">
+    <div style="position: fixed;top: 50%;left: 50%;width: 350px;background: #FFF;transform: translate(-50%, -50%);border-radius: 40px;padding: 20px 10px;">
+        <h3 style="font-weight: bold;text-align: center;font-size: 15px;">💻📂**Soledad's Bookmark**📂💻
+            <div style="
+		font-size: 16px;
+		margin-top: 26px;
+		line-height: 30px;
+		color: #ff2700;">**欢迎进入-本站资源经常更新**</div>
+        <h3 style="font-weight: bold;text-align: center;font-size: 15px;">🐧**博客**🐧
+            <div style="
+		font-size: 16px;
+		margin-top: 26px;
+		line-height: 30px;
+		color: #00ddff;">🏡**最是夜深人静时**🏡</div>
+		<p class="popup-domain">
+		<span>主站：</span>
+		<strong>
+		<a href="https://277711.xyz" target="_blank">Soledad's Blog</a>
+		</strong>
+		</p>
+		<p class="popup-domain">
+		<span>主页：</span>
+		<strong>
+		<a href="https://oneself.eu.org" target="_blank">Soledad's HomePage</a>
+		</strong>
+		</p>
+		<p class="popup-domain">
+		<span>主页：</span>
+		<strong>
+		<a href="https://creators.eu.org" target="_blank">Soledad's HomePage</a>
+		</strong
+		</p>
+		<p class="popup-domain">
+		<span>主页：</span>
+		<strong>
+		<a href="https://www.soledad.cloudns.asia" target="_blank">Soledad's HomePage</a>
+		</strong>
+		</p>
+		<p class="popup-domain">
+		<span>BookMarks：</span>
+		<strong>
+		<a href="https://www.soledad.cloudns.biz" target="_blank">Soledad's BookMarks</a>
+		</strong>
+		</p>
+		<p class="popup-domain">
+		<span>Telegram：</span>
+		<strong>
+		<a href="https://t.me/soledaday" target="_blank">一个普通的干饭人🍚</a>
+		</strong
+		</p>
+		<p class="popup-domain">
+		<span>B站：</span>
+		<strong>
+		<a href="https://space.bilibili.com/164304592" target="_blank">科技制高点</a>
+		</strong>
+		</p>
+		<p class="popup-domain">
+		<span>赞🍚赏：</span>
+		<strong>
+		<a href="https://ifcreator.eu.org" target="_blank">提供赞🍚赏方案</a>
+		</strong>
+        <h3 style="font-weight: bold;text-align: center;font-size: 20px;">🐧🏡**公众号**🏡🐧
+            <div style="
+		font-size: 16px;
+		margin-top: 26px;
+		line-height: 30px;
+		color: #0532ff;">制溪处</div>
+            <a style="
+		display: block;
+		background: #98a3ff;
+		color: #FFF;
+		text-align: center;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 30px;
+		margin: 0 auto;
+		margin-top: 20px;
+		border-radius: 32px;
+		width: 30%;
+		" onclick="javascript:document.querySelector('.web_notice').remove()">
+                我知道了</a>
+    </div>
+</div>
+<!-- 弹窗公告结束-->
+<br>
+
+		<!--音乐播放器所用的文件-->
+<!-- require APlayer -->
+<link rel="stylesheet" href="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.css">
+<script src="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://npm.elemecdn.com/meting@2.0.1/dist/Meting.min.js"></script>
+<br>
+
+</script>
+		<!--音乐播放器-->
+        <meting-js fixed="true" autoplay="true" theme="#409EFF" list-folded="true" auto="https://music.163.com/#/playlist?id=473750436"></meting-js>
+<br>
+
+<!--小时钟-->
+<center>
+<iframe frameborder="0" src="https://music.youtd.cc/shizhong.html" width="100%" height="120px" scrolling="no">
+</iframe>
+<br>
+
+		<!--网站运行时间表-->
+<span id="momk">Soledad搞机几耐：
+<span id="span_dt_dt"></span>
+<script>/*2020/10/20*/function show_date_time(){window.setTimeout("show_date_time()",1e3);var BirthDay=new Date("2002/04/04"),today=new Date,timeold=today.getTime()-BirthDay.getTime(),msPerDay=864e5,e_daysold=timeold/msPerDay,daysold=Math.floor(e_daysold),e_hrsold=24*(e_daysold-daysold),hrsold=Math.floor(e_hrsold),e_minsold=60*(e_hrsold-hrsold), minsold=Math.floor(60*(e_hrsold-hrsold)),seconds=Math.floor(60*(e_minsold-minsold));span_dt_dt.innerHTML=daysold+"天零"+hrsold+"个钟同埋"+minsold+"分"+seconds+"秒";}show_date_time();</script><style>#momk{animation:change 10s infinite;font-weight:800;}@keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100%{color:#67bd31;}}</style></p>
+<br>
