@@ -1,0 +1,165 @@
+			html {
+				-webkit-tap-highlight-color: transparent;
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%;
+				line-height: 1.6;
+				font-size: 14px;
+				-webkit-tap-highlight-color: transparent;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #282828;
+				outline: none;
+			}
+	/*	以上是公共类,源网站上有的可以注释掉	*/
+			
+			.popup-background {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				z-index: 10;
+			}
+			
+			.popup {
+			    display: none;
+				box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05), 0 1.5rem 2.2rem rgba(0, 0, 0, 0.1);
+				overflow: hidden;
+				padding: 0 30px;
+				background: #fff;
+				width: 350px;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				z-index: 999999;
+				transform: translateX(-50%) translateY(-50%);
+				margin: 0 auto;
+				border-radius: 18px;
+				box-sizing: border-box;
+			}
+			
+			.popup::after {
+				content: '';
+				height: 150px;
+				width: 120%;
+				background: #fbeecd;
+				position: absolute;
+				bottom: -95px;
+				left: -10%;
+				z-index: -1;
+				border-radius: 50%;
+			}
+			
+			.popup-header {
+				text-align: center;
+				padding: 25px 0 10px;
+			}
+			
+			.popup-title {
+				position: relative;
+				font-size: 20px;
+				font-weight: 900;
+				display: inline-block;
+			}
+			
+			.popup-title::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 15px;
+				left: 0;
+				background: #fbeecd;
+				bottom: 3px;
+				border-radius: 4px;
+				transform: skewX(-15deg);
+				z-index: -1;
+			}
+			
+			.popup-main {
+				padding-bottom: 10px;
+			}
+			
+			.popup-main p {
+				padding: 2px 0 0;
+			}
+			
+			.popup-main p.popup-domain span {
+				position: absolute;
+				left: 0;
+				top: -20px;
+				font-size: 12px;
+				background: #ffddd5;
+				border-radius: 6px 6px 0 0;
+				padding: 0 6px;
+				height: 32px;
+				line-height: 22px;
+				color: #e50914;
+				z-index: -1;
+			}
+			
+			.popup-main p.popup-domain:nth-child(2) {
+				margin-top: 45px;
+			}
+			
+			.popup-main p.popup-domain {
+				margin: 35px 0 25px;
+				background: #f3f5f7;
+				text-align: center;
+				position: relative;
+				border-radius: 10px;
+				padding: 10px 0;
+			}
+			
+			.popup-main p.popup-domain strong {
+				font-size: 20px;
+			}
+			
+			.popup-footer {
+				padding: 10px 0 30px;
+				text-align: center;
+			}
+			
+			.popup-btn {
+				position: relative;
+				cursor: pointer;
+				overflow: hidden;
+				border-radius: 50px;
+				font-weight: 700;
+				padding: 0 30px;
+				transition: box-shadow .2s ease;
+				background: #e50914;
+				color: #fff;
+				background: linear-gradient(to right, #ff711f 0%, #e50914 100%);
+				box-shadow: 0 10px 12px -4px rgba(229, 9, 20, 0.25);
+				line-height: 40px;
+				font-size: 14px;
+				display: inline-block;
+			}
+			
+			.popup-btn::after {
+				content: '';
+				height: 40px;
+				width: 25px;
+				background: #fff;
+				position: absolute;
+				top: 0;
+				transform: skewX(-45deg);
+				right: 115%;
+				opacity: 0;
+			}
+			
+			@media (max-width: 559px) {
+				.popup {
+					width: 82%;
+					padding: 0 25px;
+				}
+			}
